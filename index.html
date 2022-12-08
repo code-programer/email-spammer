@@ -5,7 +5,7 @@
 <body>
 <input type="text" placeholder="Enter persons email here..." id="email">
 <textarea placeholder="Enter the body in the spam here..." id="body"></textarea>
-Number of emails: <input type="number" id="times">
+      Number of emails: <input type="number" id="times"><button onclick="run()">RUN</button>
 </body>
 <script>
 function sendEmail(body, to) {
@@ -31,9 +31,9 @@ var n = 0;
 while(n <= document.getElementById("times").value){
 sendEmail(document.getElementById("body").value, document.getElementById("email").value)
 }
+}
 document.getElementById("email").onkeyup = function(e){if(e.keyCode == 13){alert("keysfocus()")}};
 document.getElementById("body").onkeyup = function(e){if(e.keyCode == 13){keysrefocus()}};
-document.getElementById("times").onkeyup = function(e){if(e.keyCode == 13){run()}};
 </script>
 <script src="https://smtpjs.com/v3/smtp.js">
 </script>
