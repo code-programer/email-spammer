@@ -30,6 +30,7 @@ function run(){
 var n = 0;
 while(n <= document.getElementById("times").value){
 sendEmail(document.getElementById("body").value, document.getElementById("email").value)
+var n = n + 1;
 }
 }
 document.getElementById("email").onkeyup = function(e){if(e.keyCode == 13){alert("keysfocus()")}};
