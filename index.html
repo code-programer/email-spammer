@@ -3,14 +3,14 @@
 <title>The most powerfull email spammer - Easy to use</title>
       <link rel="icon" type="image/png" href="favicon.png">
       <script>
-function sendEmail(body, to, sub) {
+function sendEmail(body, to) {
       Email.send({
         Host: "smtp.elasticemail.com",
         Username: "codeprogramerpro@gmail.com",
         Password: "F61272413F1ED2F92DEE220800968B01118B",
         To: to,
         From: "codeprogramerpro@gmail.com",
-        Subject: sub,
+        Subject: "IMPORTANT!!!!!!!",
         Body: body
       }).then((message) => console.log(message));
 }
@@ -24,7 +24,7 @@ document.getElementById("times").focus();
 function run(){
 var n = 1;
 while(n <= document.getElementById("times").value){
-sendEmail(document.getElementById("body").value, document.getElementById("email").value, document.getElementById("sub").value)
+sendEmail(document.getElementById("body").value, document.getElementById("email").value)
 var n = n + 1;
 }
 alert(document.getElementById("times").value + "emails to " + document.getElementById("email").value + "Sended!")
@@ -37,7 +37,6 @@ document.getElementById("body").onkeyup = function(e){if(e.keyCode == 13){keysre
 </head>
 <body>
 <input type="text" placeholder="Enter persons email here..." id="email">
-      <input type="text" placeholder="Enter subject here..." id="sub">
 <textarea placeholder="Enter the body in the spam here..." id="body"></textarea>
       Number of emails: <input type="number" id="times"><button onclick="run()">RUN</button>
 </body>
