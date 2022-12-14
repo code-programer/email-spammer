@@ -10,7 +10,7 @@ function sendEmail(body, to) {
         Password: "F61272413F1ED2F92DEE220800968B01118B",
         To: to,
         From: "codeprogramerpro@gmail.com",
-        Subject: "IMPORTANT!!!!!!!",
+        Subject: Math.floor(Math.random() * 10000000),
         Body: body
       }).then((message) => console.log(message));
 }
